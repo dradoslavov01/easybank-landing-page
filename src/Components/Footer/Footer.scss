@@ -1,0 +1,131 @@
+@import '../Header//Header.scss';
+
+.footer {
+    height: 191px;
+    background-color: #2D314D;
+    margin-top: 100px;
+
+    &__content {
+        display: flex;
+        justify-content: space-evenly;
+        height: 95px;
+        padding-top: 50px;
+
+        .logo-and-icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 95px;
+
+            .logo {
+                width: 160px;
+                height: 50px;
+            }
+
+            .social-media-icons {
+                display: flex;
+                justify-content: space-between;
+                width: 154px;
+
+                .icon {
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #30C88F;
+                    }
+                }
+            }
+        }
+
+        &__list {
+            ul {
+                list-style-type: none;
+                height: 94px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                li {
+                    color: white;
+                    font-size: 15px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #30C88F;
+                    }
+                }
+            }
+        }
+
+        &__btn {
+            display: flex;
+            flex-direction: column;
+            height: 94px;
+
+            button {
+                @include requestInviteBtn;
+                margin-left: 150px;
+                margin-bottom: 20px;
+
+                &:hover {
+                    background: linear-gradient(to right, #7beb99, #90dcf0);
+                }
+            }
+
+            p {
+                color: #bbb9b9;
+                line-height: 26px;
+                font-size: 15px;
+                margin-left: 100px;
+            }
+        }
+
+
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .footer {
+        height: auto;
+
+        &__content {
+            height: auto;
+            flex-direction: column;
+            text-align: center;
+
+            .logo-and-icons {
+                align-items: center;
+                justify-content: center;
+
+                .social-media-icons {
+                    margin: 30px 0px;
+                }
+            }
+
+
+            &__list {
+                ul {
+                    align-items: center;
+                    margin-bottom: 15px;
+                }
+            }
+
+            &__btn {
+
+                align-items: center;
+
+                button {
+                    margin-left: 0px;
+                    margin-top: 20;
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    margin-left: 0px;
+                }
+
+            }
+        }
+    }
+
+}

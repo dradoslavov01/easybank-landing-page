@@ -1,0 +1,149 @@
+@import '../Header/Header.scss';
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__text {
+        width: 447px;
+        height: 316px;
+        margin-left: 50px;
+
+        p:nth-child(1) {
+            width: 401px;
+            font-size: 56px;
+            line-height: 64px;
+            color: #2D314D;
+        }
+
+        p:nth-child(2) {
+            width: 447px;
+            height: 84px;
+            font-size: 18px;
+            color: #9597A5;
+            margin-top: 30px;
+        }
+
+        button {
+            margin-top: 20px;
+            @include requestInviteBtn;
+
+            &:hover {
+                background: linear-gradient(to right, #7beb99, #90dcf0);
+            }
+        }
+    }
+
+    &__icons {
+        position: relative;
+        width: 800px;
+        height: 800px;
+        overflow: hidden;
+        margin-left: -100px;
+
+        .desktopIcon {
+            margin-top: -280px;
+        }
+
+        .mockupsIcon {
+            position: absolute;
+            bottom: 0px;
+            left: 150px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .intro {
+        &__text {
+            padding-left: 0px;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .intro.active {
+        background: linear-gradient(#c9c9cc, #2D314D);
+    }
+
+
+    .intro {
+        flex-direction: column-reverse;
+
+        &__text {
+            text-align: center;
+            margin-top: -200px;
+
+        }
+
+        .desktopIcon {
+            margin-top: -500px;
+            margin-left: -50px;
+        }
+
+        .mockupsIcon.active {
+            display: none;
+        }
+
+        .mockupsIcon {
+            width: 600px;
+            bottom: 290px;
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .intro.active {
+        background: linear-gradient(#c9c9cc, #2D314D);
+    }
+
+    .intro {
+        &__text {
+            width: 320px;
+            margin: 0;
+
+            p:nth-child(1) {
+                width: 320px;
+                font-size: 40px;
+            }
+
+            p:nth-child(2) {
+                width: 320px;
+                font-size: 15px;
+            }
+        }
+
+        &__icons {
+            position: relative;
+            width: 100%;
+            margin: 0;
+            height: auto;
+            overflow: hidden;
+
+            .desktopIcon {
+                margin: 0;
+                margin-left: -300px;
+                margin-top: -700px;
+            }
+
+            .mockupsIcon.active {
+                display: none;
+            }
+
+            .mockupsIcon {
+                width: 350px;
+                top: -100px;
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+
+            }
+
+
+        }
+
+    }
+}
